@@ -29,7 +29,7 @@ function App() {
 
 
   const sendEmail = async (res) => {
-    await axios.post("http://localhost:5000/student/create", {
+    await axios.post("https://learndickback.herokuapp.com//student/create", {
       email: res.user.email,
       photoUrl: res.user.photoURL,
       displayName: res.user.displayName,

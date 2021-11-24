@@ -9,7 +9,7 @@ const OutherDictionry = ()=>{
     const [student, setStudent] = useState([])
 
     const getData = async() =>{
-        await axios.get("http://localhost:5000/student/get")
+        await axios.get("https://learndickback.herokuapp.com/student/get")
         .then(res => setStudent(res.data) )
         .catch(err => alert(err.message))
     }

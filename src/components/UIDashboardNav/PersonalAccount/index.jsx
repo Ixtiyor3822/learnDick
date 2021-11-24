@@ -1,7 +1,7 @@
 import React from 'react';
 import UserNav from '..';
 
-let rasm = localStorage.getItem("photoUrl").toString();
+let rasm = localStorage.getItem("photoUrl").toString() || 'https://picsum.photos/50';
 
 const PersonalAccount = () => {
     return (

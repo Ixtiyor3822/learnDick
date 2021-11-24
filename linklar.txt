@@ -1,0 +1,5 @@
+home
+mydictionry
+otherdictionry
+mychats
+personal

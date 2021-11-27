@@ -5,7 +5,7 @@ import {useSpeechSynthesis} from 'react-speech-kit';
 
 const Dicks = ({word}) =>{
 
-    const speak = useSpeechSynthesis();
+    const {speak} = useSpeechSynthesis();
 
     const clickhandler = async(text)=>{
         speak({text: text})

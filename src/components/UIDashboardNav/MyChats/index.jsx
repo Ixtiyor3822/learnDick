@@ -1,17 +1,11 @@
 import React from 'react';
-import UserNav from '..';
-import Chat from './Chat';
+// import Chat from './Chat';
 
 const MyChats = () =>{
     return (
         <>
            <div className="row">
-            <div className="col-1">
-            <UserNav />
-            </div>
-            <div className="col-1 ">
-            </div>
-            <div className="col-9">
+            <div className="col">
                 <ul className="list-group mt-3">
                    Hozircha chat mavjud emas.
         

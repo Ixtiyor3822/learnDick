@@ -12,6 +12,12 @@ import MyChats from './components/UIDashboardNav/MyChats';
 import PersonalAccount from './components/UIDashboardNav/PersonalAccount';
 import SignOut from './components/UIDashboardNav/SignOut';
 import axios from 'axios';
+import UserNav from './components/UIDashboardNav';
+import NewDick from './components/UIDashboardNav/NewDick';
+
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function App() {
   // const {speak} = useSpeechSynthesis();
@@ -69,27 +75,36 @@ function App() {
   // error={error} message={message} 
   if (data) {
     return (
-      <Routes>
-        <Route path='/' element={<Dashboard />} />
-        <Route path='/home' element={<Dashboard />} />
-        <Route path='/mydictionry' element={<MyDictionry />} />
-        <Route path='/otherdictionry' element={<OutherDictionry />} />
-        <Route path='/mychats' element={<MyChats />} />
-        <Route path='/personal' element={<PersonalAccount />} />
-        <Route path='/signOut' element={<SignOut />} />
-        <Route path='*' element={<main>
-          Bunday sahifa mavjud emas.
-        </main>} />
+      <>
+        <UserNav />
+        <Routes>
+          <Route path='/' element={<Dashboard />} />
+          <Route path='/home' element={<Dashboard />} />
+          <Route path='/mydictionry' element={<MyDictionry />} />
+          <Route path='/otherdictionry' element={<OutherDictionry />} />
+          <Route path='/mychats' element={<MyChats />} />
+          <Route path='/personal' element={<PersonalAccount />} />
+          <Route path='/signOut' element={<SignOut />} />
+          <Route path='/new' element={<NewDick />} />
+
+          <Route path='*' element={<main>
+            Bunday sahifa mavjud emas.
+          </main>} />
 
 
-      </Routes>
+        </Routes>
+        <ToastContainer />
+      </>
     )
   } else {
     return (
-      <Routes>
-        <Route path='/' element={<UI login={login} />} />
-      </Routes>
+      <>
+        <Routes>
+          <Route path='/' element={<UI login={login} />} />
+        </Routes>
+      </>
     )
+
   }
 
 }

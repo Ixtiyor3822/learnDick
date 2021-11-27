@@ -107,7 +107,7 @@ const NewDick = () => {
     // 935782303
     const sendData = async () => {
         setLoading(true);
-        await axios.post('https://dashboard.heroku.com/dick/create', { eng: data.eng, rus: data.rus, uzb: data.uzb, qr: data.qr, email: localStorage.getItem('email') })
+        await axios.post('https://learndickback.herokuapp.com/dick/create', { eng: data.eng, rus: data.rus, uzb: data.uzb, qr: data.qr, email: localStorage.getItem('email') })
             .then(res => {
                 setLoading(false);
                 console.log(res.data)

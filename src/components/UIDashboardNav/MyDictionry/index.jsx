@@ -13,7 +13,7 @@ const MyDictionry = () => {
     const [data, setData] = useState([]);
     const getData = async (email) => {
         setLoading(true);
-        await axios.post('https://dashboard.heroku.com/dick/get', { email: email })
+        await axios.post('https://learndickback.herokuapp.com/dick/get', { email: email })
             .then(res => {
                 toast.success(res.data.message)
                 setData(res.data.dicks)

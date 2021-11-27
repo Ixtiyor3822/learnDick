@@ -17,13 +17,13 @@ const Dicks = ({word}) =>{
                 <div className="col-sm-12 col-md-6 border col-lg-3 p-3 text-center">
                 <h1 className="h1 text-center p-0">Eng</h1>
                     <p>{word.eng}</p>
-                    <FontAwesomeIcon onClick={clickhandler} className="fs-1 text-primary" icon={faVolumeDown}></FontAwesomeIcon>
+                    <FontAwesomeIcon onClick={() => clickhandler(word.eng)} className="fs-1 text-primary" icon={faVolumeDown}></FontAwesomeIcon>
                 </div>
                 <div className="col-sm-12 col-md-6 border col-lg-3 p-3 text-center">
                 <h1 className="h1 text-center p-0">Rus</h1>
 
                     <p>{word.rus}</p>
-                    <FontAwesomeIcon onClick={clickhandler} className="fs-1 text-primary" icon={faVolumeDown}></FontAwesomeIcon>
+                    <FontAwesomeIcon onClick={() => clickhandler(word.rus)} className="fs-1 text-primary" icon={faVolumeDown}></FontAwesomeIcon>
                 </div>
 
                 <div className="col-sm-12 col-md-6 border col-lg-3 p-3 text-center">
